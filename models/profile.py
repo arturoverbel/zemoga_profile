@@ -5,10 +5,10 @@ class Profile(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     twitter = db.Column(db.String(120), unique=True, nullable=False)
-    title = db.Column(db.String(80), nullable=False)
+    title = db.Column(db.String(200), nullable=False)
 
-    user_info = db.Column(db.String(80))
-    image = db.Column(db.String(80))
+    user_info = db.Column(db.Text)
+    image = db.Column(db.String(250))
     description = db.Column(db.Text)
 
 
